@@ -629,6 +629,321 @@ export const mockArticles = [
       clinicalCase: "Paciente de 84 años con demencia incipiente que presenta episodios de inestabilidad y sequedad de boca. Su tratamiento incluye Amitriptilina 25mg/noche por dolor neuropático, Oxibutinina 5mg/12h por incontinencia urinaria y Lorazepam 1mg/noche por insomnio.",
       localApplicability: "Despliegue de una sesión de actualización en Geriatría y Farmacia para presentar la escala de riesgo anticolinérgico y los algoritmos de desprescripción consensuados."
     }
+  },
+  {
+    id: "art-15",
+    title: "Ceftacidima/Avibactam frente a Polimixina B en Infecciones Graves por Klebsiella pneumoniae Productora de Carbapenemasas (KPC): Ensayo Clínico CRACKLE-II",
+    source: "The Lancet Infectious Diseases",
+    date: "2026-05-14",
+    specialty: "Infecciones",
+    transversal: "Sepsis y PROA (Optimización de Antimicrobianos)",
+    pubType: "Ensayo clínico",
+    relevance: 93,
+    impact: 91,
+    summary: "Estudio clínico prospectivo y observacional multicéntrico que compara la efectividad y nefrotoxicidad de Ceftacidima/Avibactam frente a polimixina B en pacientes con bacteriemia y neumonía nosocomial causadas por enterobacterias productoras de carbapenemasas KPC. Demuestra una reducción del 50% en la mortalidad hospitalaria ajustada y tasas muy inferiores de fracaso renal agudo.",
+    practiceChange: {
+      whatsNew: "Confirma clínicamente la obsolescencia de las pautas basadas en colistina/polimixina B como tratamiento de elección para KPC, posicionando a Ceftacidima/Avibactam como primera línea preferente.",
+      patientProfile: "Pacientes adultos hospitalizados con infecciones del torrente sanguíneo o del tracto respiratorio inferior por enterobacterias productoras de carbapenemasas de tipo serín-betalactamasa (KPC).",
+      drugsAffected: "Ceftacidima/Avibactam (Zavicefta®), Polimixina B, Colistina, Meropenem.",
+      precautions: "Vigilar la posible emergencia de resistencia a Ceftacidima/Avibactam mediada por mutaciones en la betalactamasa KPC (como KPC-3) durante tratamientos prolongados."
+    },
+    guidelineComparison: {
+      classification: "amplía",
+      details: "Amplía las guías de la SEIMC y de la ESCMID al aportar datos comparativos robustos de mortalidad de vida real y nefrotoxicidad directa entre ambos enfoques terapéuticos."
+    },
+    criticalReading: {
+      pico: "P: Pacientes hospitalizados con bacteriemia o neumonía por K. pneumoniae productora de KPC.\nI: Monoterapia o combinación con Ceftacidima/Avibactam.\nC: Regímenes basados en Polimixina B o Colistina.\nO: Mortalidad hospitalaria por todas las causas a los 30 días y tasa de fallo renal agudo (criterios KDIGO).",
+      internalValidity: "Alta. Estudio de cohorte prospectivo que utilizó un análisis de propensión de emparejamiento (propensity score matching) muy riguroso para controlar el sesgo de confusión por indicación clínico.",
+      externalValidity: "Excelente. Incluye centros hospitalarios reales de alta complejidad, reflejando el manejo habitual en unidades de infecciosas.",
+      biases: "Sesgo de información mitigado mediante evaluación centralizada y ciega del estado de curación clínica y de las determinaciones microbiológicas de resistencia.",
+      sampleSize: "285 pacientes incluidos de forma consecutiva.",
+      evidenceQuality: "Moderada-Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Justificación farmacoeconómica para sustituir colistina en la guía farmacoterapéutica local, a pesar del mayor coste unitario de Ceftacidima/Avibactam, debido al ahorro en diálisis y menor estancia en la UCI.",
+      reconciliation: "Validación rápida por el farmacéutico PROA de los perfiles moleculares de resistencia para autorizar el fármaco en menos de 24 horas."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "Ceftacidima/Avibactam reduce la mortalidad intrahospitalaria un 50% ajustado en comparación con las polimixinas tradicionales.",
+        "La tasa de fallo renal agudo inducido por fármacos fue del 6% con Ceftacidima/Avibactam frente al 28% con Polimixina B (p<0.001).",
+        "Se desaconseja formalmente el uso de colistina/polimixina B como primera línea empírica o dirigida frente a KPC activa."
+      ],
+      summarySlide: "CRACKLE-II: Ceftacidima/Avibactam vs Polimixina B en KPC.\n- Mortalidad a 30 días: Reducción significativa (HR 0.52; p=0.002) en favor de Zavicefta.\n- Nefrotoxicidad: Disminución drástica del fracaso renal agudo (6% vs 28%).\n- Posicionamiento: Tratamiento de primera línea preferente guiado por PCR de resistencia.",
+      debateQuestion: "¿Cómo podemos agilizar la retirada total de la colistina de los stock de planta para evitar su uso accidental en infecciones sensibles a los nuevos betalactámicos?",
+      clinicalCase: "Paciente de 69 años con bacteriemia por K. pneumoniae con PCR positiva para gen blaKPC. Presenta un aclaramiento basal de 35 mL/min. Recibe pauta inicial empírica con Colistina y Meropenem, presentando al tercer día un aumento de creatinina plasmática de 1.1 mg/dL.",
+      localApplicability: "Establecimiento de una regla de decisión clínica en el software de farmacia para proponer el switch inmediato a Ceftacidima/Avibactam ante hemocultivos positivos para KPC."
+    }
+  },
+  {
+    id: "art-16",
+    title: "Inmunoterapia con Pembrolizumab en Combinación con Quimioterapia en Cáncer de Pulmón No Microcítico Metastásico: Estudio de Fase III KEYNOTE-189",
+    source: "Journal of Clinical Oncology (JCO)",
+    date: "2026-05-10",
+    specialty: "Oncología/Hematología",
+    transversal: "Seguridad del paciente",
+    pubType: "Ensayo clínico",
+    relevance: 95,
+    impact: 94,
+    summary: "Ensayo clínico de fase III, aleatorizado y doble ciego, que evalúa la adición de Pembrolizumab a la quimioterapia con Pemetrexed y un platino (cisplatino o carboplatino) en pacientes con cáncer de pulmón no microcítico (CPNM) no escamoso metastásico no tratado previamente y sin mutaciones EGFR/ALK. Demuestra una prolongación sustancial de la supervivencia global.",
+    practiceChange: {
+      whatsNew: "Establece como estándar de primera línea mundial la combinación de inmunoterapia más quimioterapia, logrando un beneficio en supervivencia independientemente del nivel de expresión del biomarcador PD-L1.",
+      patientProfile: "Pacientes adultos diagnosticados de CPNM no escamoso metastásico, en primera línea de tratamiento, con buen estado funcional y sin alteraciones de los oncogenes EGFR o ALK.",
+      drugsAffected: "Pembrolizumab (Keytruda®), Pemetrexed, Cisplatino, Carboplatino.",
+      precautions: "Monitorización activa de efectos adversos inmunomediados (neumonitis, colitis, hipofisitis o nefritis). Requiere uso precoz de corticoides sistémicos ante cualquier síntoma sospechoso."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Confirma y consolida las directrices de la guía ESMO y de la SEOM 2025 para el cáncer de pulmón avanzado, situando esta combinación como pauta de elección preferencial de clase I."
+    },
+    criticalReading: {
+      pico: "P: Pacientes con CPNM no escamoso metastásico no tratado previamente, sin mutaciones EGFR/ALK.\nI: Pembrolizumab (200 mg) más Pemetrexed y Platino cada 3 semanas (4 ciclos) seguido de Pembrolizumab y Pemetrexed de mantenimiento.\nC: Placebo más Pemetrexed y Platino.\nO: Supervivencia global (SG) y supervivencia libre de progresión (SLP).",
+      internalValidity: "Alta. Diseño controlado con placebo, aleatorizado 2:1, doble ciego, multicéntrico internacional. Análisis robusto por intención de tratar con pérdidas de seguimiento mínimas.",
+      externalValidity: "Excelente. Criterios de selección realistas que representan el grueso de pacientes metastásicos atendidos en los servicios de Oncología del país.",
+      biases: "Bajo riesgo de sesgo debido al riguroso cegamiento de los evaluadores de imágenes radiográficas (criterios RECIST 1.1) y de los clínicos implicados.",
+      sampleSize: "616 pacientes aleatorizados (410 en brazo de intervención, 206 en control).",
+      evidenceQuality: "Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Aprobación y protocolización inmediata en el Servicio de Farmacia para la dosificación fija de Pembrolizumab a 200 mg (o pauta extendida de 400 mg cada 6 semanas) para optimizar la ocupación del Hospital de Día.",
+      reconciliation: "Elaboración de una tarjeta de seguridad específica de inmunoterapia para el paciente oncológico, coordinando visitas mensuales con enfermería y farmacéutico para el control de toxicidades inmunomediadas."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La supervivencia global a los 12 meses fue significativamente superior en el brazo de Pembrolizumab (69.2% frente a 49.4%; HR 0.49).",
+        "El beneficio en supervivencia se extiende de forma consistente a los tres subgrupos de expresión de PD-L1 (incluyendo los de <1%).",
+        "La incidencia de efectos adversos de grado 3 o superior inmunomediados fue del 18.9%, exigiendo educación sanitaria rigurosa del paciente."
+      ],
+      summarySlide: "KEYNOTE-189: Pembrolizumab + Quimioterapia en CPNM.\n- Supervivencia Global Mediana: 22.0 meses con Pembrolizumab vs 10.7 meses con quimioterapia sola (HR 0.56; p<0.001).\n- Beneficio transversal: Consistente en PD-L1 <1%, 1-49% y ≥50%.\n- Toxicidad: Neumonitis inmunomediada (4.4%) y colitis (2.2%) como eventos de interés.",
+      debateQuestion: "¿Cómo implementaremos un circuito ágil de interconsulta con el Servicio de Endocrinología y Digestivo ante sospecha de tiroiditis o colitis por inmunoterapia?",
+      clinicalCase: "Varón de 59 años, fumador activo, diagnosticado de adenocarcinoma pulmonar metastásico con metástasis óseas. El análisis molecular descarta mutaciones EGFR y ALK. La expresión de PD-L1 resulta del 0%. Se debate en el comité de tumores el inicio del tratamiento con Pembrolizumab asociado a quimioterapia.",
+      localApplicability: "Despliegue de plantillas de validación farmacéutica automatizadas en el programa Oncofarm para verificar los niveles hepáticos y tiroideos antes de cada ciclo."
+    }
+  },
+  {
+    id: "art-17",
+    title: "Eficacia de Sacubitrilo/Valsartán en Pacientes con Insuficiencia Cardíaca Agudamente Descompensada: Ensayo Clínico PIONEER-HF",
+    source: "New England Journal of Medicine (NEJM)",
+    date: "2026-05-12",
+    specialty: "Cardiología",
+    transversal: "Polimedicación",
+    pubType: "Ensayo clínico",
+    relevance: 92,
+    impact: 90,
+    summary: "Ensayo clínico aleatorizado y doble ciego que evalúa el inicio intrahospitalario de Sacubitrilo/Valsartán frente a Enalapril en pacientes ingresados por insuficiencia cardíaca aguda con fracción de eyección reducida tras lograr la estabilización hemodinámica. Demuestra una mayor y más rápida reducción del biomarcador NT-proBNP.",
+    practiceChange: {
+      whatsNew: "Aporta evidencia de primer nivel para avalar el inicio del inhibidor de neprilisina en el propio ámbito hospitalario (durante el ingreso) en lugar de esperar al alta, mejorando el pronóstico cardiovascular temprano.",
+      patientProfile: "Pacientes adultos hospitalizados por insuficiencia cardíaca aguda descompensada con fracción de eyección del ventrículo izquierdo (FEVI) ≤40%, estabilizados sin necesidad de inótropos o vasodilatadores IV en las últimas 24 horas.",
+      drugsAffected: "Sacubitrilo/Valsartán (Entresto®), Enalapril, Ramipril, Canderasartán.",
+      precautions: "Vigilar estrechamente la presión arterial sistólica (riesgo de hipotensión sintomática). Respetar un período de lavado de 36 horas si el paciente tomaba previamente un IECA."
+    },
+    guidelineComparison: {
+      classification: "amplía",
+      details: "Amplía las guías de la Sociedad Europea de Cardiología (ESC) 2025 al adelantar el posicionamiento de Sacubitrilo/Valsartán a la fase hospitalaria aguda de forma segura."
+    },
+    criticalReading: {
+      pico: "P: Pacientes hospitalizados con insuficiencia cardíaca descompensada y FEVI ≤40% estabilizados.\nI: Inicio intrahospitalario de Sacubitrilo/Valsartán (dosis ajustada).\nC: Inicio intrahospitalario de Enalapril (dosis ajustada).\nO: Cambio proporcional en la concentración plasmática de NT-proBNP desde el inicio hasta las semanas 4 y 8.",
+      internalValidity: "Alta. Estudio controlado aleatorizado, doble ciego, multicéntrico. Distribución homogénea de características basales y alta adherencia al protocolo en ambos brazos clínicos.",
+      externalValidity: "Excelente. Refleja de forma fiel el perfil habitual del paciente con insuficiencia cardíaca sistólica ingresado en el servicio de Cardiología del hospital.",
+      biases: "Bajo riesgo de sesgos. El análisis de biomarcadores y el registro de eventos isquémicos/reingresos se realizó mediante comités centralizados e independientes.",
+      sampleSize: "881 pacientes aleatorizados en 129 centros.",
+      evidenceQuality: "Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Inclusión de Sacubitrilo/Valsartán en la guía del hospital con indicación específica de inicio intrahospitalario en pacientes seleccionados, reduciendo la inercia médica.",
+      reconciliation: "Garantizar la interrupción del IECA (Enalapril) 36 horas antes de la primera dosis de Sacubitrilo/Valsartán en la planta de Cardiología para evitar el angioedema."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "Sacubitrilo/Valsartán logró una reducción del 47% de los niveles de NT-proBNP frente al 25% con Enalapril a las 8 semanas (p<0.001).",
+        "El inicio intrahospitalario redujo significativamente un 46% el riesgo relativo de reingreso por insuficiencia cardíaca a los 30 días.",
+        "Las tasas de hipotensión sintomática, hiperpotasemia y empeoramiento de función renal fueron similares en ambos grupos."
+      ],
+      summarySlide: "PIONEER-HF: Sacubitrilo/Valsartán intrahospitalario.\n- Resultados: Reducción superior del NT-proBNP (diferencia de -29%; p<0.001).\n- Seguridad clínica: Sin incremento en eventos renales graves o angioedema.\n- Beneficio asociado: Menor reingreso a los 30 días (HR 0.54).\n- Pauta operativa: Respetar lavado de 36 horas si venía de Enalapril.",
+      debateQuestion: "¿Cómo podemos formar a los médicos residentes de Cardiología y Medicina Interna para implementar la pauta de lavado de 36 horas y evitar errores graves de seguridad?",
+      clinicalCase: "Paciente varón de 68 años ingresado por insuficiencia cardíaca aguda. FEVI 30%. Estabilizado tras diuréticos IV, normotenso (TAS 105 mmHg), con Enalapril 5mg/12h en tratamiento habitual. Se plantea iniciar Sacubitrilo/Valsartán en planta.",
+      localApplicability: "Despliegue de una orden clínica bloqueante en el programa de prescripción médica que obligue a suspender el IECA durante 36 horas antes de validar la primera dosis de Entresto."
+    }
+  },
+  {
+    id: "art-18",
+    title: "Impacto del Farmacéutico Clínico integrado en Planta sobre la Tasa de Errores de Transcripción y Conciliación al Ingreso en Pacientes Crónicos Complejos",
+    source: "American Journal of Health-System Pharmacy (AJHP)",
+    date: "2026-05-02",
+    specialty: "Farmacia Hospitalaria",
+    transversal: "Polimedicación",
+    pubType: "Ensayo clínico",
+    relevance: 88,
+    impact: 86,
+    summary: "Estudio controlado multicéntrico que evalúa el impacto de la conciliación activa de la medicación en las primeras 24 horas del ingreso de pacientes crónicos complejos pluripatológicos realizada por farmacéuticos clínicos integrados en planta. Reporta una reducción del 68% en las discrepancias no intencionadas de medicación activa.",
+    practiceChange: {
+      whatsNew: "Demuestra de forma robusta la reducción del riesgo relativo de eventos adversos prevenibles al incorporar al farmacéutico en los pases de visita diarios de las plantas médicas.",
+      patientProfile: "Pacientes adultos hospitalizados en Medicina Interna o Geriatría con criterios de paciente crónico complejo (≥5 patologías y ≥8 fármacos crónicos activos).",
+      drugsAffected: "Anticoagulantes, antiagregantes, diuréticos, antidiabéticos orales, insulina, psicofármacos.",
+      precautions: "Requiere una estrecha coordinación e integración física del farmacéutico con el equipo médico de la planta en el horario de pase de visita matutino."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Confirma los estándares nacionales de seguridad del paciente del Ministerio de Sanidad y las recomendaciones de la SEFH sobre la implantación del farmacéutico de planta."
+    },
+    criticalReading: {
+      pico: "P: Pacientes crónicos complejos que ingresan en las salas de hospitalización de Medicina Interna.\nI: Conciliación de medicación estructurada en las primeras 24 horas realizada por un farmacéutico integrado en planta.\nC: Conciliación convencional realizada por el médico al ingreso según historia clínica básica.\nO: Tasa de discrepancias no intencionadas por paciente al ingreso y eventos adversos prevenibles por medicamentos.",
+      internalValidity: "Alta. Diseño controlado aleatorizado por grupos (cluster randomized study) por planta médica. Criterios de medida de discrepancias validados y unificados.",
+      externalValidity: "Excelente. Refleja las dinámicas asistenciales habituales en hospitales generales de tamaño medio y grande.",
+      biases: "Riesgo menor de contaminación cruzada atenuado por la aleatorización por plantas independientes. Evaluación ciega de los eventos adversos por revisores externos.",
+      sampleSize: "480 pacientes incluidos en 4 hospitales participantes.",
+      evidenceQuality: "Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Establecer la figura del farmacéutico de planta como estándar de calidad en el organigrama del Servicio de Farmacia, justificando la dotación en base a la evitación de costes.",
+      reconciliation: "Implantación del protocolo de conciliación al ingreso y diseño de una herramienta de registro específica en la historia clínica del paciente compartida."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "El 54% de los pacientes crónicos presenta al menos una discrepancia no intencionada en su tratamiento al ingresar en el hospital.",
+        "La presencia física del farmacéutico en planta reduce la tasa de errores de conciliación no intencionados en un 68% (p<0.001).",
+        "Los principales fármacos causantes de discrepancias potencialmente graves fueron los antiagregantes y los antidiabéticos."
+      ],
+      summarySlide: "Farmacéutico Clínico integrado en Planta Médica.\n- Intervención: Conciliación clínica en las primeras 24h del ingreso vs Cuidado estándar.\n- Resultados primarios:\n  * Discrepancias resueltas: Reducción del 68% (de 2.4 errores por paciente a 0.8; p<0.001).\n  * Eventos adversos evitados: Disminución del 32% (p=0.015).\n- Conclusión: Modelo asistencial altamente efectivo para aumentar la seguridad del paciente crítico al ingreso.",
+      debateQuestion: "¿Cómo podemos reorganizar las tareas de distribución de medicamentos en el Servicio de Farmacia para liberar el tiempo necesario de los farmacéuticos en planta?",
+      clinicalCase: "Paciente de 82 años con diabetes y fibrilación auricular. Ingresa por infección urinaria. El médico mantiene su insulina del hospital pero duplica accidentalmente su tratamiento con Apixabán al transcribir una pauta de su historial antiguo.",
+      localApplicability: "Despliegue de una agenda diaria de conciliación en el programa informático para que los pacientes crónicos ingresados sean priorizados en el listado de trabajo."
+    }
+  },
+  {
+    id: "art-19",
+    title: "Adecuación de la Fluidoterapia de Reanimación en Sepsis Grave y Shock Séptico en Urgencias: Estudio de Cohortes Multicéntrico",
+    source: "Annals of Emergency Medicine",
+    date: "2026-05-18",
+    specialty: "Urgencias",
+    transversal: "Sepsis y PROA (Optimización de Antimicrobianos)",
+    pubType: "Revisión",
+    relevance: 86,
+    impact: 84,
+    summary: "Estudio de cohorte retrospectivo multicéntrico que evalúa la adecuación de la fluidoterapia de reanimación (administración de 30 mL/kg de cristaloides) en pacientes con sepsis grave y shock séptico en el área de urgencias, y analiza su asociación con la mortalidad hospitalaria y el desarrollo de sobrecarga hídrica.",
+    practiceChange: {
+      whatsNew: "Pone de relieve que, aunque la fluidoterapia inicial agresiva es clave, la falta de personalización y la sobrecarga de volumen (&gt;10% del peso corporal) se asocia con mayor estancia en UCI y mortalidad.",
+      patientProfile: "Pacientes adultos atendidos en Urgencias que cumplen criterios de sepsis grave o shock séptico (lactato plasmático ≥4 mmol/L o hipotensión refractaria).",
+      drugsAffected: "Suero Fisiológico (Cloruro Sódico 0.9%), Ringer Lactato, Plasmalyte, albúmina.",
+      precautions: "Monitorización de signos de sobrecarga hídrica mediante ecografía pulmonar o venosa a pie de cama y ecocardiografía simplificada antes de administrar fluidos adicionales."
+    },
+    guidelineComparison: {
+      classification: "cuestiona",
+      details: "Cuestiona la recomendación rígida de fluidoterapia inicial fija de 30 mL/kg para todos los pacientes sin valorar previamente la respuesta vascular individual o riesgo de sobrecarga."
+    },
+    criticalReading: {
+      pico: "P: Pacientes adultos en shock séptico o sepsis grave atendidos en Urgencias.\nI: Fluidoterapia de reanimación guiada por parámetros dinámicos de respuesta a volumen (ej. elevación pasiva de piernas).\nC: Fluidoterapia fija estándar de 30 mL/kg.\nO: Mortalidad por todas las causas a los 28 días, necesidad de ventilación mecánica y tasa de sobrecarga hídrica.",
+      internalValidity: "Moderada. Diseño observacional de cohortes retrospectivo. Aunque se realizó un ajuste multivariante y regresión logística, persiste el riesgo de sesgo de confusión debido a variables no registradas en la historia de urgencias.",
+      externalValidity: "Excelente. Datos tomados de la práctica real de 10 servicios de urgencias hospitalarios de urgencias, aportando representatividad al SNS.",
+      biases: "Sesgo de selección latente y sesgo de información asociado a la recopilación retrospectiva de datos de balances hídricos.",
+      sampleSize: "850 registros clínicos de pacientes seguidos consecutivamente.",
+      evidenceQuality: "Moderada-Baja (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Establecer la disponibilidad de cristaloides balanceados (como Ringer Lactato o Plasmalyte) en los carros de parada y boxes de críticos de Urgencias frente al suero salino clásico.",
+      reconciliation: "Inclusión de parámetros de fluidoterapia dinámica en la hoja de prescripción informatizada de Urgencias para obligar al registro de la respuesta hemodinámica."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La fluidoterapia agresiva e indiscriminada superior a 30 mL/kg en pacientes que no responden a volumen se asocia a mayor distrés respiratorio agudo.",
+        "El uso de cristaloides balanceados disminuye el riesgo de acidosis hiperclorémica en comparación con el Cloruro Sódico 0.9%.",
+        "La reanimación debe guiarse de forma precoz por parámetros hemodinámicos dinámicos y no únicamente por metas de volumen fijas."
+      ],
+      summarySlide: "Reanimación en Sepsis en Urgencias: Fluidos vs Sobrecarga.\n- Hallazgo principal: Sobrecarga hídrica (>10%) incrementa el riesgo de muerte a los 28 días (OR 1.62; p=0.015).\n- Cristaloides: Mayor tasa de fallo renal en grupo tratado con Salino 0.9% frente a Balanceados (Ringer).\n- Recomendación: Evaluar respuesta a volumen dinámicamente antes de superar los primeros 2.000 mL de fluido.",
+      debateQuestion: "¿Cómo podemos concienciar a los urgenciólogos sobre los riesgos clínicos de la 'sobrehidratación' sistémica en pacientes con fallo cardíaco o renal previo?",
+      clinicalCase: "Paciente de 77 años con antecedentes de insuficiencia cardíaca. Ingresa por shock séptico de origen urinario. Se le infunden 3.500 mL de suero fisiológico en 4 horas. Presenta posteriormente disnea progresiva, crepitantes difusos y saturación del 88% en aire ambiente.",
+      localApplicability: "Despliegue de un algoritmo visual interactivo de fluidoterapia en sepsis en el box de críticos de Urgencias adaptado a las guías locales."
+    }
+  },
+  {
+    id: "art-20",
+    title: "Seguridad y Eficacia a Largo Plazo de Secukinumab en Pacientes con Espondiloartritis Axial Radiográfica: Registro Clínico Nacional de Biológicos",
+    source: "Annals of the Rheumatic Diseases (ARD)",
+    date: "2026-05-15",
+    specialty: "Reumatología",
+    transversal: "Seguridad del paciente",
+    pubType: "Revisión",
+    relevance: 87,
+    impact: 85,
+    summary: "Estudio clínico de vida real basado en los datos del registro nacional de pacientes con espondiloartritis axial activa tratados con Secukinumab (anti-IL17A) tras el fallo o intolerancia a fármacos anti-TNF. Evalúa la persistencia del tratamiento a los 3 años y la tasa de infecciones oportunistas o enfermedad inflamatoria intestinal.",
+    practiceChange: {
+      whatsNew: "Confirma la eficacia y la excelente persistencia a largo plazo de Secukinumab en vida real como segunda línea biológica, reportando un perfil de seguridad favorable sin incremento de casos de enfermedad inflamatoria intestinal.",
+      patientProfile: "Pacientes adultos con espondiloartritis axial radiográfica activa que han presentado respuesta inadecuada o intolerancia a al menos un inhibidor del TNF-alfa.",
+      drugsAffected: "Secukinumab (Cosentyx®), Adalimumab, Infliximab, Etanercept.",
+      precautions: "Realizar cribado de enfermedad inflamatoria intestinal (enfermedad de Crohn y colitis ulcerosa) antes de iniciar, y monitorizar signos de candidiasis mucocutánea leve."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Confirma las recomendaciones de las guías de la EULAR y de la Sociedad Española de Reumatología (SER) sobre el posicionamiento de los anti-IL17 en pacientes con fallo previo a anti-TNF."
+    },
+    criticalReading: {
+      pico: "P: Pacientes con espondiloartritis axial activa con fallo previo a anti-TNF.\nI: Tratamiento de mantenimiento con Secukinumab 150 mg o 300 mg subcutáneo mensual.\nC: Datos históricos o cohorte de persistencia a anti-TNF secundarios.\nO: Tasa de persistencia del fármaco a los 3 años y tasa de efectos adversos graves de interés.",
+      internalValidity: "Alta. Basada en el análisis prospectivo de un registro nacional nacional unificado de fármacos biológicos con criterios de inclusión y exclusión estandarizados y auditorías de calidad periódicas.",
+      externalValidity: "Excelente. Representa las prácticas reales de prescripción y seguimiento de los servicios de Reumatología de todo el territorio nacional.",
+      biases: "Sesgo de selección e inercia terapéutica propios de estudios de registro controlados mediante técnicas de imputación múltiple y emparejamiento por puntuación de propensión.",
+      sampleSize: "620 pacientes registrados con un seguimiento mediano de 3.2 años.",
+      evidenceQuality: "Moderada-Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Establecer la dosis de 150 mg como pauta inicial estándar en la CFT, reservando la dosis de 300 mg únicamente para pacientes con respuesta subóptima para optimizar la eficiencia económica del hospital.",
+      reconciliation: "Conciliación farmacoterapéutica en la consulta externa de farmacia. Educación al paciente en la técnica de autoinyección subcutánea y monitorización de la adherencia."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La tasa de persistencia del Secukinumab a los 3 años fue del 68.4% en pacientes con fallo previo a un anti-TNF.",
+        "Se observó una baja tasa de infecciones graves (1.2 por 100 pacientes-año) y ausencia de brotes significativos de colitis ulcerosa.",
+        "La dosis de 300 mg mostró una eficacia superior en pacientes con afectación cutánea por psoriasis concomitante grave."
+      ],
+      summarySlide: "Secukinumab en Espondiloartritis Axial (Vida Real).\n- Persistencia a 3 años: 68.4% de éxito terapéutico sostenido.\n- Eficacia: Reducción mantenida del ASDAS en ≥1.1 puntos en el 58% de pacientes.\n- Seguridad: Tasa muy baja de infecciones graves. Candidiasis oral transitoria en el 4.2%.\n- Posicionamiento: Segunda línea biológica de elección post-antiTNF.",
+      debateQuestion: "¿Cómo podemos estandarizar las pautas de intensificación de dosis a 300 mg en la CFT del hospital basándonos en criterios objetivos de respuesta clínica?",
+      clinicalCase: "Paciente de 42 años con espondiloartritis anquilosante en tratamiento con Adalimumab durante 18 meses con pérdida secundaria de respuesta. Presenta dolor lumbar inflamatorio alto y reactantes de fase aguda elevados. Se plantea el cambio a Secukinumab subcutáneo.",
+      localApplicability: "Creación de un documento de solicitud de inicio de terapia biológica en Reumatología con criterios de escala analógica visual (EVA) e índices ASDAS pre-cargados."
+    }
+  },
+  {
+    id: "art-21",
+    title: "Monoclonales anti-TSLP (Tezepelumab) frente a Placebo en Asma Grave Refractaria no Controlada: Ensayo Clínico NAVIGATOR",
+    source: "The Lancet",
+    date: "2026-05-18",
+    specialty: "Respiratorio",
+    transversal: "Seguridad del paciente",
+    pubType: "Ensayo clínico",
+    relevance: 90,
+    impact: 89,
+    summary: "Ensayo clínico aleatorizado y doble ciego de fase III que evalúa la eficacia de Tezepelumab (un anticuerpo monoclonal que bloquea la linfopoyetina estromal tímica - TSLP) frente a placebo en pacientes con asma grave no controlada. Demuestra una reducción del 56% en la tasa anualizada de exacerbaciones asmáticas.",
+    practiceChange: {
+      whatsNew: "Introduce por primera vez un biológico eficaz en asma grave no dependiente de la inflamación tipo 2 (T2-low), beneficiando a pacientes no candidatos a otros biológicos clásicos.",
+      patientProfile: "Pacientes de 12 a 80 años con asma grave no controlada que reciben dosis altas de corticoides inhalados y un segundo fármaco de control, independientemente de los niveles basales de eosinófilos.",
+      drugsAffected: "Tezepelumab (Tezspire®), Omalizumab, Mepolizumab, Benralizumab, Dupilumab.",
+      precautions: "Vigilar reacciones locales en el punto de inyección y monitorizar al paciente por posibles reacciones de hipersensibilidad o anafilaxia sistémica diferida."
+    },
+    guidelineComparison: {
+      classification: "amplía",
+      details: "Amplía las guías GEMA (Guía Española para el Manejo del Asma) 2025 al incorporar la terapia anti-alarmina en el algoritmo terapéutico para el asma grave no eosinofílica."
+    },
+    criticalReading: {
+      pico: "P: Pacientes de 12 a 80 años con asma grave no controlada.\nI: Tezepelumab 210 mg por vía subcutánea cada 4 semanas.\nC: Inyección de Placebo cada 4 semanas.\nO: Tasa anualizada de exacerbaciones asmáticas durante un período de 52 semanas.",
+      internalValidity: "Alta. Estudio de fase III aleatorizado 1:1, controlado, doble ciego, multinacional. Análisis por intención de tratar adecuado, con tasas de abandono muy bajas (<5%) distribuidas simétricamente.",
+      externalValidity: "Excelente. Los criterios de exclusión son mínimos, lo que permite extrapolar el beneficio a los pacientes asmáticos complejos de las consultas de Neumología y Alergia.",
+      biases: "Bajo riesgo de sesgos. Aleatorización centralizada e independiente con asignación del fármaco enmascarada mediante jeringas de idéntica apariencia.",
+      sampleSize: "1.061 pacientes aleatorizados en total.",
+      evidenceQuality: "Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Protocolización en la CFT para restringir Tezepelumab principalmente a pacientes con asma grave no T2 (eosinófilos <150 cél/mcL) o refractarios a biológicos anti-IL5/anti-IL4R previos, por motivos de optimización de coste.",
+      reconciliation: "Dispensación de inicio intrahospitalaria de las tres primeras dosis para adiestrar al paciente, permitiendo posteriormente la autoadministración domiciliaria con soporte telefónico."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "Tezepelumab reduce la tasa de exacerbaciones anuales un 56% global frente al placebo (p<0.001).",
+        "El fármaco demostró eficacia clínica incluso en el subgrupo de pacientes con eosinófilos en sangre <150 cél/mcL.",
+        "Se constató una mejora del FEV1 pre-broncodilatador de 130 mL a las 52 semanas frente a placebo."
+      ],
+      summarySlide: "Ensayo NAVIGATOR: Tezepelumab en Asma Grave.\n- Eficacia primaria: Reducción del 56% en exacerbaciones anuales (p<0.001).\n- Subgrupo Eosinófilos <150 cél/mcL: Disminución significativa del 39%.\n- Función Pulmonar: Mejora del FEV1 en 130 mL.\n- Posicionamiento: Primer biológico eficaz para pacientes con asma grave no T2-high.",
+      debateQuestion: "¿Cómo coordinaremos los criterios de derivación conjunta entre Alergología y Neumología para identificar a los pacientes candidatos a esta terapia biológica?",
+      clinicalCase: "Paciente de 41 años diagnosticada de asma grave refractaria. Presenta 3 exacerbaciones moderadas que requirieron corticoides sistémicos este año. Sus niveles de eosinófilos en sangre periférica son de 90 cél/mcL (inflamación T2-low).",
+      localApplicability: "Despliegue de un cuestionario de cribado clínico informatizado para validar los requisitos de prescripción de Tezepelumab según el protocolo de la CFT."
+    }
   }
 ];
 
