@@ -17,6 +17,7 @@ export default function Dashboard({
   const [selectedSpecialties, setSelectedSpecialties] = useState([]);
   const [selectedTransversals, setSelectedTransversals] = useState([]);
   const [selectedPubTypes, setSelectedPubTypes] = useState([]);
+  const [selectedSources, setSelectedSources] = useState([]);
   const [minRelevance, setMinRelevance] = useState(0);
   const [sortBy, setSortBy] = useState('relevance'); // 'relevance', 'date', 'impact'
   const [isFiltersExpanded, setIsFiltersExpanded] = useState(false);
@@ -81,6 +82,18 @@ export default function Dashboard({
     "Documento de consenso"
   ];
 
+  const availableSources = [
+    { label: "Farmacia Hospitalaria", match: "Farmacia Hospitalaria" },
+    { label: "European Journal of Hospital Pharmacy", match: "European Journal of Hospital Pharmacy" },
+    { label: "NEJM", match: "New England Journal of Medicine" },
+    { label: "The Lancet", match: "The Lancet" },
+    { label: "EIMC", match: "Enfermedades Infecciosas y Microbiología Clínica" },
+    { label: "Emergencias", match: "Emergencias" },
+    { label: "Revista Clínica Española", match: "Revista Clínica Española" },
+    { label: "AEMPS", match: "Agencia Española de Medicamentos y Productos Sanitarios" },
+    { label: "Otras revistas", match: "Otras" }
+  ];
+
   const toggleSpecialty = (spec) => {
     setSelectedSpecialties(prev => 
       prev.includes(spec) ? prev.filter(s => s !== spec) : [...prev, spec]
@@ -99,11 +112,18 @@ export default function Dashboard({
     );
   };
 
+  const toggleSource = (srcLabel) => {
+    setSelectedSources(prev => 
+      prev.includes(srcLabel) ? prev.filter(s => s !== srcLabel) : [...prev, srcLabel]
+    );
+  };
+
   const resetFilters = () => {
     setSearchTerm('');
     setSelectedSpecialties([]);
     setSelectedTransversals([]);
     setSelectedPubTypes([]);
+    setSelectedSources([]);
     setMinRelevance(0);
     setSortBy('relevance');
   };
@@ -125,10 +145,29 @@ export default function Dashboard({
     // Pub Types match
     const matchesPubType = selectedPubTypes.length === 0 || selectedPubTypes.includes(article.pubType);
 
+    // Sources match
+    const matchesSource = selectedSources.length === 0 || selectedSources.some(srcLabel => {
+      if (srcLabel === "Otras revistas") {
+        const mainMatches = [
+          "Farmacia Hospitalaria",
+          "European Journal of Hospital Pharmacy",
+          "New England Journal of Medicine",
+          "The Lancet",
+          "Enfermedades Infecciosas y Microbiología Clínica",
+          "Emergencias",
+          "Revista Clínica Española",
+          "Agencia Española de Medicamentos y Productos Sanitarios"
+        ];
+        return !mainMatches.some(m => article.source.includes(m));
+      }
+      const matchObj = availableSources.find(s => s.label === srcLabel);
+      return matchObj && article.source.includes(matchObj.match);
+    });
+
     // Relevance match
     const matchesRelevance = article.relevance >= minRelevance;
 
-    return matchesSearch && matchesSpecialty && matchesTransversal && matchesPubType && matchesRelevance;
+    return matchesSearch && matchesSpecialty && matchesTransversal && matchesPubType && matchesSource && matchesRelevance;
   }).sort((a, b) => {
     if (sortBy === 'relevance') {
       return b.relevance - a.relevance;
@@ -150,7 +189,7 @@ export default function Dashboard({
         <div>
           <h2 className="text-base font-bold text-slate-900">Monitor de Evidencia Hospitalaria</h2>
           <p className="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span>Fuentes activas: PubMed, AEMPS, EMA, FDA, ClinicalTrials.gov, Guías de Sociedades Científicas.</span>
+            <span>Fuentes activas: PubMed, AEMPS, EMA, FDA, ClinicalTrials.gov, Guías de Sociedades, Revista Farmacia Hospitalaria, European Journal of Hospital Pharmacy.</span>
             <span className="hidden sm:inline">•</span>
             <span className="text-brand-600 font-medium">Última comprobación: {syncState.lastSync}</span>
           </p>
@@ -189,7 +228,7 @@ export default function Dashboard({
               <SlidersHorizontal className="h-4 w-4 text-brand-600" />
               Filtros y Búsqueda
             </h3>
-            {(selectedSpecialties.length > 0 || selectedTransversals.length > 0 || selectedPubTypes.length > 0 || minRelevance > 0 || searchTerm !== '') && (
+            {(selectedSpecialties.length > 0 || selectedTransversals.length > 0 || selectedPubTypes.length > 0 || selectedSources.length > 0 || minRelevance > 0 || searchTerm !== '') && (
               <button 
                 onClick={resetFilters}
                 className="text-[10px] text-rose-600 hover:underline font-bold transition-all"
@@ -250,6 +289,29 @@ export default function Dashboard({
               onChange={(e) => setMinRelevance(Number(e.target.value))}
               className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-600"
             />
+          </div>
+
+          {/* Source/Journal Filters */}
+          <div className="space-y-2 border-t border-slate-100 pt-3.5">
+            <label className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Revistas y Fuentes</label>
+            <div className="flex flex-wrap gap-1.5">
+              {availableSources.map(src => {
+                const active = selectedSources.includes(src.label);
+                return (
+                  <button
+                    key={src.label}
+                    onClick={() => toggleSource(src.label)}
+                    className={`text-[10px] font-bold px-2.5 py-1 rounded-lg border transition-all ${
+                      active 
+                        ? 'bg-brand-600 text-white border-brand-600 shadow-sm shadow-brand-100' 
+                        : 'bg-slate-50 text-slate-600 border-slate-200/70 hover:bg-slate-100'
+                    }`}
+                  >
+                    {src.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Specialty Filters */}

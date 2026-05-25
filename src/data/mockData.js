@@ -944,6 +944,276 @@ export const mockArticles = [
       clinicalCase: "Paciente de 41 años diagnosticada de asma grave refractaria. Presenta 3 exacerbaciones moderadas que requirieron corticoides sistémicos este año. Sus niveles de eosinófilos en sangre periférica son de 90 cél/mcL (inflamación T2-low).",
       localApplicability: "Despliegue de un cuestionario de cribado clínico informatizado para validar los requisitos de prescripción de Tezepelumab según el protocolo de la CFT."
     }
+  },
+  {
+    id: "art-22",
+    title: "Implementación de un Circuito de Prescripción Electrónica Asistida con Alertas Clínicas de Ajuste de Dosis por Función Renal en Pacientes Ancianos",
+    source: "Farmacia Hospitalaria",
+    date: "2026-05-24",
+    specialty: "Farmacia Hospitalaria",
+    transversal: "Paciente anciano/frágil",
+    pubType: "Ensayo clínico",
+    relevance: 89,
+    impact: 87,
+    summary: "Estudio observacional prospectivo antes-después que evalúa el impacto de alertas automáticas basadas en la ecuación CKD-EPI integradas en el programa de prescripción médica. Analiza la reducción de la sobredosificación de fármacos críticos y la tasa de nefrotoxicidad asociada en pacientes hospitalizados mayores de 70 años.",
+    practiceChange: {
+      whatsNew: "Demuestra que la integración de calculadoras automáticas de aclaramiento de creatinina vinculadas a avisos en pantalla evita el 72% de las dosis potencialmente tóxicas de fármacos nefrotóxicos o de eliminación renal.",
+      patientProfile: "Pacientes de 70 años o más ingresados en salas generales con un filtrado glomerular estimado inferior a 60 mL/min/1.73m².",
+      drugsAffected: "Nuevos anticoagulantes orales directos (apixabán, rivaroxabán), Enoxaparina, Metformina, Digoxina, Alopurinol, antibióticos betalactámicos.",
+      precautions: "Evitar la fatiga por alertas configurando avisos únicamente para fármacos de estrecho margen terapéutico o reducciones de dosis >30% del estándar."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Confirma los criterios nacionales de seguridad y conciliación de la SEFH para prevenir eventos adversos por medicamentos en pacientes crónicos complejos."
+    },
+    criticalReading: {
+      pico: "P: Pacientes hospitalizados de ≥70 años con insuficiencia renal moderada-grave.\nI: Sistema de prescripción electrónica asistida con alertas de ajuste de dosis automáticas.\nC: Fase previa sin alertas automáticas de dosificación.\nO: Proporción de prescripciones correctamente ajustadas a la función renal y eventos adversos renales.",
+      internalValidity: "Alta. Diseño prospectivo de tipo cuasi-experimental (antes-después) con control exhaustivo del perfil clínico basal y auditoría continua de las prescripciones validadas.",
+      externalValidity: "Excelente. El software y los flujos analizados corresponden a los sistemas de receta electrónica hospitalaria habituales del SNS.",
+      biases: "Sesgo de confusión histórico corregido mediante regresión logística multivariante para controlar cambios en el perfil de gravedad de los ingresos.",
+      sampleSize: "1.100 pacientes analizados (550 en fase control y 550 en fase intervención).",
+      evidenceQuality: "Alta en su ámbito operativo y de seguridad"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Integración informática de algoritmos de dosificación según guías locales en el módulo del software de prescripción médica del hospital.",
+      reconciliation: "Validación farmacéutica diaria asistida por alertas para proponer el ajuste al médico en la sesión clínica matinal de la planta."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La implantación de alertas electrónicas incrementó la dosificación correcta del 41% al 84% de las recetas de riesgo.",
+        "Se observó una reducción absoluta del 5.8% en el desarrollo de insuficiencia renal aguda hospitalaria por nefrotoxicidad.",
+        "Es clave parametrizar el software para evitar la saturación y el cierre sistemático de avisos por parte del personal médico."
+      ],
+      summarySlide: "Alertas Clínicas de Dosificación Renal en Ancianos.\n- Resultados primarios: Ajuste de dosis óptimo aumenta del 41% al 84% (p<0.001).\n- Seguridad del paciente: Descenso significativo de eventos adversos (OR 0.38; p=0.002).\n- Fármacos de mayor impacto: Anticoagulantes directos y antibióticos.\n- Recomendación: Configurar alertas activas obligatorias de interrupción.",
+      debateQuestion: "¿Cómo podemos diseñar un circuito de validación conjunta médico-farmacéutico para resolver las alertas complejas sin interrumpir el flujo asistencial?",
+      clinicalCase: "Paciente mujer de 81 años ingresada por neumonía. Presenta un peso de 48 kg y creatinina sérica de 1.4 mg/dL (aclaramiento estimado CKD-EPI de 28 mL/min). Se le prescribe enoxaparina 60 mg/24h subcutánea para profilaxis de riesgo sin ajuste renal.",
+      localApplicability: "Puesta en marcha de un piloto de alertas en el área de Medicina Interna del hospital durante un mes para evaluar la aceptación y tasa de anulación."
+    }
+  },
+  {
+    id: "art-23",
+    title: "Estabilidad y Compatibilidad Fisicoquímica de Diluciones Concentradas de Infliximab en Bolsas de Poliolefina y Jeringas de Polipropileno para Dose-Banding",
+    source: "European Journal of Hospital Pharmacy",
+    date: "2026-05-22",
+    specialty: "Farmacotecnia",
+    transversal: "Seguridad del paciente",
+    pubType: "Revisión",
+    relevance: 85,
+    impact: 83,
+    summary: "Estudio experimental de estabilidad química y microbiológica que evalúa la viabilidad del almacenamiento prolongado de diluciones de Infliximab preparadas de forma centralizada en jeringas y bolsas de infusión. Valida la implantación de la técnica de bandas de dosis fijas (dose-banding) para optimizar la preparación.",
+    practiceChange: {
+      whatsNew: "Demuestra la estabilidad fisicoquímica y el mantenimiento de la actividad inmunológica de infliximab diluido hasta 14 días conservado en refrigeración (2-8°C) y protegido de la luz.",
+      patientProfile: "Pacientes con enfermedad inflamatoria intestinal (Crohn o colitis) o artritis en tratamiento activo con Infliximab biosimilar en el Hospital de Día.",
+      drugsAffected: "Infliximab biosimilar (Remsima®, Inflectra®, Flixabi®).",
+      precautions: "Evitar la congelación de las mezclas preparadas. Confirmar la ausencia de agregados proteicos mediante inspección visual antes de la administración."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Respalda las directrices técnicas del Servicio de Farmacia para la estandarización y preparación anticipada de terapias biológicas estériles."
+    },
+    criticalReading: {
+      pico: "P: Mezclas listas para usar de infliximab diluido (10 mg/mL) en bolsas de poliolefina y jeringas de propileno.\nI: Almacenamiento a 2-8°C durante 14 días y posterior exposición a temperatura ambiente.\nC: Preparación inmediata bajo demanda a partir de viales extemporáneos.\nO: Pureza cromatográfica (HPLC-SEC), actividad de unión al TNF-alfa por ELISA, turbidez y esterilidad microbiológica.",
+      internalValidity: "Alta. Estudio experimental in vitro riguroso con metodologías validadas y repetidas para la cuantificación de monómeros, dímeros e impurezas solubles.",
+      externalValidity: "Excelente. Proporciona datos técnicos directamente trasladables al área de mezclas estériles del Servicio de Farmacia Hospitalaria.",
+      biases: "No aplica sesgo clínico por ser un análisis in vitro de estabilidad molecular.",
+      sampleSize: "Análisis por duplicado de 6 lotes independientes para cada contenedor a los días 0, 3, 7, 10 y 14.",
+      evidenceQuality: "Alta en el ámbito de estabilidad fisicoquímica farmacéutica"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Permite cambiar el flujo de trabajo del Hospital de Día, preparando lotes de infliximab de forma anticipada los lunes para cubrir la demanda de la semana.",
+      reconciliation: "Disminución del tiempo de espera del paciente en el hospital en un 38% al disponer de las mezclas previamente preparadas en la cabina de flujo laminar."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "Infliximab diluido mantiene una concentración >98% y no muestra signos de agregación o degradación física a los 14 días a 2-8°C.",
+        "La técnica de dose-banding y preparación centralizada permite una optimización del gasto farmacéutico del 10.4% por reducción de mermas de viales.",
+        "Se valida la esterilidad microbiológica de las preparaciones en jeringa tras ensayo de contaminación simulada."
+      ],
+      summarySlide: "Dose-Banding de Infliximab en el Servicio de Farmacia.\n- Hallazgo técnico: Estabilidad total demostrada durante 14 días refrigerado.\n- Envases analizados: Jeringas y bolsas sin plastificantes (poliolefina).\n- Eficiencia: Reducción del despilfarro de dosis y del tiempo de espera del paciente.\n- Requisito: Mantenimiento estricto de la cadena de frío.",
+      debateQuestion: "¿Cómo podemos coordinar con el hospital de día las citas de pacientes para agrupar las administraciones y optimizar la preparación de lotes?",
+      clinicalCase: "Se recibe una solicitud para preparar una dosis no estándar de Infliximab de 340 mg para un paciente con colitis ulcerosa refractaria. Se analiza la preparación utilizando dos viales y ajustando la dosis en banda pre-preparada de 350 mg.",
+      localApplicability: "Actualización de las guías de elaboración del Servicio de Farmacia e integración del concepto de dose-banding en el circuito de control de mezclas."
+    }
+  },
+  {
+    id: "art-24",
+    title: "Eficacia y Seguridad de la Inmunoterapia con Durvalumab en combinación con Quimioterapia en Cáncer de Vías Biliares Avanzado en Población Española: Estudio Multicéntrico RERBILIA",
+    source: "Farmacia Hospitalaria",
+    date: "2026-05-25",
+    specialty: "Oncología/Hematología",
+    transversal: "Seguridad del paciente",
+    pubType: "Ensayo clínico",
+    relevance: 91,
+    impact: 89,
+    summary: "Estudio observacional retrospectivo multicéntrico que evalúa la efectividad y el perfil de seguridad de Durvalumab en combinación con Gemcitabina y Cisplatino como primera línea en pacientes con colangiocarcinoma avanzado o metastásico en condiciones de práctica clínica habitual en España.",
+    practiceChange: {
+      whatsNew: "Confirma en vida real la tasa de respuesta objetiva (32.4%) y supervivencia libre de progresión (8.1 meses) observadas en el ensayo TOPAZ-1, posicionando a la inmunoterapia como estándar de cuidado local.",
+      patientProfile: "Pacientes adultos con colangiocarcinoma o cáncer de vesícula biliar localmente avanzado o metastásico, no candidatos a resección quirúrgica.",
+      drugsAffected: "Durvalumab (Imfinzi®), Gemcitabina, Cisplatino.",
+      precautions: "Vigilancia estrecha de toxicidades inmunomediadas (especialmente disfunción tiroidea y colitis). Requerir pruebas de función tiroidea basales y antes de cada ciclo de inmunoterapia."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Avalado por el Grupo de Farmacia Oncológica (GEDEFO) de la SEFH, confirmando las recomendaciones de ESMO y SEOM de 2025 para el uso sistemático de anti-PD-L1 en esta indicación."
+    },
+    criticalReading: {
+      pico: "P: Pacientes con cáncer de vías biliares avanzado o metastásico de primera línea.\nI: Durvalumab combinado con gemcitabina/cisplatino seguido de mantenimiento con durvalumab.\nC: Quimioterapia clásica sola (histórica o estándar).\nO: Supervivencia libre de progresión (SLP), supervivencia global (SG) y perfil de toxicidades.",
+      internalValidity: "Moderada-alta. Estudio observacional pero de gran tamaño muestral, con recogida de datos estandarizada en 14 centros hospitalarios españoles.",
+      externalValidity: "Excelente. Refleja fielmente la práctica oncológica habitual en los hospitales del Sistema Nacional de Salud.",
+      biases: "Riesgo de sesgo de selección debido a su carácter retrospectivo y pérdida de algunos pacientes por falta de seguimiento completo.",
+      sampleSize: "114 pacientes tratados. Potencia suficiente para el análisis de supervivencia.",
+      evidenceQuality: "Moderada-Alta (Evidencia de vida real)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Aprobación y protocolización de Durvalumab en la CFT del hospital. Estimación de impacto presupuestario de unos 45.000€ por paciente tratado.",
+      reconciliation: "Establecer la monitorización mensual de hormonas tiroideas (TSH, T4 libre) e incluirla en la prescripción informatizada del Servicio de Farmacia."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "Durvalumab más quimioterapia demuestra una SLP mediana de 8.1 meses frente a los 6.8 meses históricos de la quimioterapia sola.",
+        "La toxicidad inmunomediada de grado 3-4 se presentó en el 14% de los pacientes, siendo el hipotiroidismo la complicación más frecuente (18%).",
+        "El beneficio clínico se mantiene independientemente del nivel de expresión de PD-L1 en el tumor."
+      ],
+      summarySlide: "Durvalumab en Cáncer de Vías Biliares (Estudio RERBILIA).\n- Diseño: Multicéntrico observacional, 114 pacientes en España.\n- Resultados: SLP de 8.1 meses y Supervivencia Global de 12.9 meses.\n- Toxicidad: 14% de efectos adversos inmunomediados G3-4.\n- Conclusión: Efectividad clínica consistente con los ensayos de registro en condiciones de práctica real.",
+      debateQuestion: "¿Cómo optimizaremos el circuito de solicitud y validación de Durvalumab para iniciar el tratamiento en menos de 7 días tras el diagnóstico?",
+      clinicalCase: "Varón de 67 años diagnosticado de colangiocarcinoma intrahepático con metástasis pulmonares bilaterales. Excelente estado general (ECOG 0). Se propone inicio de tratamiento de primera línea con Durvalumab + Gemcitabina + Cisplatino tras valoración multidisciplinar.",
+      localApplicability: "Creación del protocolo de preparación en cabina de citostáticos y plantilla de prescripción en el programa de Hospital de Día."
+    }
+  },
+  {
+    id: "art-25",
+    title: "Prevención de Errores de Medicación en Pacientes Críticos mediante la Estandarización de Concentraciones de Perfusión de Fármacos Vasoactivos: Resultados de una Encuesta Nacional",
+    source: "European Journal of Hospital Pharmacy",
+    date: "2026-05-24",
+    specialty: "Paciente Crítico",
+    transversal: "Seguridad del paciente",
+    pubType: "Revisión",
+    relevance: 88,
+    impact: 86,
+    summary: "Estudio descriptivo que analiza el impacto de la unificación de concentraciones estándar de perfusión continua para Noradrenalina, Dopamina y Dobutamina en 25 Unidades de Cuidados Intensivos españolas. Evalúa la reducción de errores en la preparación y programación de bombas inteligentes.",
+    practiceChange: {
+      whatsNew: "Demuestra que la adopción de una concentración única estándar de Noradrenalina (0.1 mg/mL y 0.2 mg/mL) disminuye un 68% los errores de programación de bombas de perfusión en UCI.",
+      patientProfile: "Pacientes adultos ingresados en UCI que requieren soporte inotrópico o vasoactivo.",
+      drugsAffected: "Noradrenalina, Dobutamina, Dopamina, Nitroglicerina parenteral.",
+      precautions: "Se requiere formación del personal de enfermería en el manejo de las nuevas diluciones estandarizadas y actualización del software de las bombas de infusión inteligentes con límites estrictos (guardrails)."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Alineado con las recomendaciones de seguridad de la European Association of Hospital Pharmacists (EAHP) y de la campaña 'Medicamentos sin Daños' de la OMS."
+    },
+    criticalReading: {
+      pico: "P: Personal de enfermería y médicos que programan perfusiones vasoactivas en UCI.\nI: Implementación de concentraciones estándar de perfusión vasoactiva y bombas inteligentes.\nC: Preparación clásica con dosis variables de fármaco añadidas al suero.\nO: Tasa de discrepancias o errores de dosificación en la preparación y programación.",
+      internalValidity: "Alta. Recogida sistemática de errores y cuasi-errores de medicación a través de un registro específico de seguridad antes y después de la estandarización.",
+      externalValidity: "Muy alta. Los fármacos y sistemas de bombas analizados son de uso habitual en la gran mayoría de UCIs españolas.",
+      biases: "Riesgo de subnotificación voluntaria de errores en ambas fases, mitigado mediante auditorías directas aleatorias y anónimas por farmacéuticos de UCI.",
+      sampleSize: "Registro de 12.400 horas de infusión controladas y auditadas.",
+      evidenceQuality: "Alta en gestión del riesgo y seguridad del paciente"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Adopción de las concentraciones estándar aprobadas por la Comisión de Farmacia y Terapéutica e implantación de jeringas listas para usar (RTU) preparadas por el Servicio de Farmacia o adquiridas comercialmente.",
+      reconciliation: "Revisión diaria del perfil de infusión de los pacientes críticos durante las rondas de visita conjunta en UCI."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La estandarización reduce los errores graves de dosificación vasoactiva a pie de cama de un 8.4% a un 1.2%.",
+        "La preparación de mezclas en el Servicio de Farmacia garantiza la esterilidad y estabilidad físico-química del preparado.",
+        "La biblioteca de fármacos en las bombas inteligentes debe ser bloqueada para evitar anulaciones manuales de los límites de seguridad."
+      ],
+      summarySlide: "Estandarización de Vasoactivos en Paciente Crítico.\n- Objetivo: Reducir errores de programación y preparación.\n- Solución: Concentraciones estándar únicas validadas por el Servicio de Farmacia.\n- Impacto: Disminución de errores de infusión del 8.4% al 1.2% (p<0.001).\n- Recomendación: Implementar jeringas listas para uso y actualizar bombas con guardrails.",
+      debateQuestion: "¿Cuáles son las principales dificultades del Servicio de Farmacia para suministrar jeringas prellenadas de Noradrenalina de forma continua en fines de semana?",
+      clinicalCase: "Paciente en shock séptico que requiere dosis crecientes de Noradrenalina. Enfermería prepara una disolución añadiendo 2 viales a 100 mL de suero fisiológico, pero en el cambio de turno se confunde la concentración programada en la bomba, programándola como disolución simple en lugar de doble.",
+      localApplicability: "Despliegue del protocolo de estandarización conjunto entre Farmacia y Medicina Intensiva, con auditoría de cumplimiento trimestral."
+    }
+  },
+  {
+    id: "art-26",
+    title: "Eficacia de un Programa de Desprescripción de Benzodiacepinas en Centros Sociosanitarios liderado por Farmacéuticos de Hospital",
+    source: "Farmacia Hospitalaria",
+    date: "2026-05-23",
+    specialty: "Geriatría",
+    transversal: "Paciente anciano/frágil",
+    pubType: "Ensayo clínico",
+    relevance: 90,
+    impact: 88,
+    summary: "Ensayo clínico controlado y aleatorizado por clústeres que evalúa la efectividad de una intervención educativa y de soporte a la desprescripción dirigida por farmacéuticos para reducir el uso crónico de benzodiacepinas en pacientes ancianos institucionalizados en residencias geriátricas de larga estancia.",
+    practiceChange: {
+      whatsNew: "Consigue suspender o reducir en más del 50% la dosis de benzodiacepinas en el 62% de los pacientes crónicos del grupo de intervención, logrando una reducción del 45% en la tasa de caídas a los 6 meses de seguimiento.",
+      patientProfile: "Pacientes de 65 años o más que residen en centros sociosanitarios con uso continuado de benzodiacepinas durante más de 3 meses.",
+      drugsAffected: "Lorazepam, Lormetazepam, Diazepam, Alprazolam, Zolpidem.",
+      precautions: "El proceso de desprescripción debe ser gradual (tapering) para evitar el síndrome de abstinencia y el insomnio de rebote, requiriendo un seguimiento estrecho del paciente."
+    },
+    guidelineComparison: {
+      classification: "confirma",
+      details: "Apoya las recomendaciones de desprescripción basadas en los Criterios STOPP/START y las guías de la Sociedad Española de Geriatría y Gerontología (SEGG)."
+    },
+    criticalReading: {
+      pico: "P: Residentes ancianos crónicos consumidores de benzodiacepinas.\nI: Programa de desprescripción dirigido por farmacéutico con pauta de retirada gradual.\nC: Cuidado habitual y seguimiento médico estándar sin pauta estructurada de retirada.\nO: Tasa de suspensión definitiva a los 6 meses, frecuencia de caídas y calidad del sueño.",
+      internalValidity: "Alta. Aleatorización por clústeres (residencias) para evitar la contaminación entre pacientes. Evaluación ciega de los endpoints de seguridad por investigadores independientes.",
+      externalValidity: "Excelente. El perfil de los residentes incluidos es plenamente representativo de la población institucionalizada en centros sociosanitarios de España.",
+      biases: "Riesgo menor de sesgo por pérdida de pacientes en el seguimiento (12% por fallecimiento o traslado, esperable en esta población).",
+      sampleSize: "320 pacientes de 12 centros residenciales.",
+      evidenceQuality: "Alta (GRADE)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Inclusión de guías de retirada y folletos informativos de desprescripción en la cartera de servicios sociosanitarios del Servicio de Farmacia.",
+      reconciliation: "Conciliación activa y revisión semestral sistemática de toda la terapia sedante-hipnótica en pacientes mayores institucionalizados."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "El farmacéutico como integrador clínico lidera la reducción exitosa del uso inadecuado de hipnóticos en ancianos frágiles.",
+        "Se demuestra un descenso muy significativo del riesgo de caídas (HR 0.55, p=0.012) sin empeoramiento percibido de la calidad del sueño.",
+        "La implicación y educación de los cuidadores y enfermería de la residencia es indispensable para el éxito de la retirada."
+      ],
+      summarySlide: "Desprescripción de Benzodiacepinas en Residencias.\n- Resultados de Intervención: 62% logran retirada total o reducción del 50% de dosis.\n- Impacto en Caídas: Descenso del 45% en el brazo de intervención a 6 meses.\n- Calidad del Sueño: Medida por escala de Pittsburg, sin diferencias vs control.\n- Conclusión: La intervención farmacéutica estructurada es segura, eficaz y mejora la calidad asistencial.",
+      debateQuestion: "¿Cómo podemos convencer a los familiares y cuidadores sobre el beneficio de desprescribir hipnóticos de larga duración cuando los asocian erróneamente a tranquilidad?",
+      clinicalCase: "Paciente de 86 años residente con antecedentes de demencia leve y 2 caídas sin fractura este año. Toma Lormetazepam 2 mg por la noche desde hace 4 años. El farmacéutico propone iniciar un plan de reducción de dosis a 1 mg durante 2 semanas, luego 0.5 mg durante otras 2 semanas, antes de suspender.",
+      localApplicability: "Establecimiento de un protocolo de revisión estructurado en la historia clínica sociosanitaria compartida."
+    }
+  },
+  {
+    id: "art-27",
+    title: "Evaluación de la Eficacia y Coste-Efectividad de la monitorización farmacocinética de Adalimumab en Pacientes con Enfermedad Inflamatoria Intestinal: Estudio de Vida Real",
+    source: "European Journal of Hospital Pharmacy",
+    date: "2026-05-22",
+    specialty: "Coste-Efectividad",
+    transversal: "Polimedicación",
+    pubType: "Revisión",
+    relevance: 86,
+    impact: 84,
+    summary: "Estudio observacional que analiza la costo-efectividad de la monitorización terapéutica de fármacos (TDM) reactiva y proactiva de Adalimumab en pacientes con enfermedad de Crohn y colitis ulcerosa. Demuestra optimización del gasto en biológicos y tasas de remisión clínica sostenida.",
+    practiceChange: {
+      whatsNew: "Demuestra que la monitorización proactiva de niveles séricos de Adalimumab (manteniendo niveles valle entre 5-10 mcg/mL) evita la pérdida de respuesta y reduce un 18% los costes de intensificación innecesaria de dosis en comparación con el manejo empírico.",
+      patientProfile: "Pacientes con enfermedad de Crohn o colitis ulcerosa moderada-grave en tratamiento de mantenimiento con Adalimumab.",
+      drugsAffected: "Adalimumab (incluyendo biosimilares de menor coste).",
+      precautions: "Garantizar la toma de muestras de sangre exactamente en el momento valle (justo antes de la siguiente administración subcutánea) para asegurar la validez de los resultados farmacocinéticos."
+    },
+    guidelineComparison: {
+      classification: "amplía",
+      details: "Complementa las guías del Grupo Español de Trabajo en Enfermedad de Crohn y Colitis Ulcerosa (GETECCU) promoviendo la incorporación activa del farmacéutico clínico en el ajuste PK."
+    },
+    criticalReading: {
+      pico: "P: Pacientes adultos con enfermedad inflamatoria intestinal en tratamiento con Adalimumab.\nI: Ajuste de dosis guiado por monitorización farmacocinética (niveles y anticuerpos anti-adalimumab).\nC: Manejo clínico convencional basado únicamente en síntomas y marcadores inflamatorios (proteína C reactiva, calprotectina).\nO: Tasa de remisión clínica sostenida a 12 meses, tasas de intensificación y coste directo por paciente.",
+      internalValidity: "Moderada-Alta. Cohorte prospectiva bien caracterizada, con determinaciones analíticas centralizadas mediante ELISA validado.",
+      externalValidity: "Excelente. Los protocolos y biosimilares de Adalimumab analizados corresponden al estándar actual en los hospitales españoles.",
+      biases: "Posible sesgo de clasificación en pacientes con síntomas dudosos. Mitigado mediante el uso de criterios objetivos de remisión endoscópica y calprotectina fecal.",
+      sampleSize: "184 pacientes incluidos con seguimiento completo de un año.",
+      evidenceQuality: "Moderada-Alta (Estudio observacional con gran impacto práctico)"
+    },
+    pharmacotherapeuticImpact: {
+      selection: "Consolidar el circuito de determinación analítica de niveles valle de anti-TNF en el Servicio de Farmacia Hospitalaria o Bioquímica.",
+      reconciliation: "Participación del farmacéutico en la consulta externa de digestivo para ajustar la dosis basándose en el informe farmacocinético integrado."
+    },
+    clinicalSession: {
+      keyMessages: [
+        "La monitorización farmacocinética proactiva es superior al ajuste empírico por síntomas para evitar el fracaso terapéutico secundario.",
+        "Los anticuerpos anti-Adalimumab a títulos altos (>10 UA/mL) se asocian a niveles indetectables del fármaco y exigen el cambio de diana terapéutica.",
+        "El ahorro medio estimado es de 1.200€ por paciente/año en concepto de evitación de intensificaciones de dosis inútiles."
+      ],
+      summarySlide: "Monitorización de Adalimumab en EII.\n- Resultados Clave: Remisión sostenida a un año en el 78% del grupo PK vs 64% control (p=0.03).\n- Ahorro económico: Disminución de costes de intensificación en un 18%.\n- Criterio de ajuste: Nivel valle óptimo 5-10 mcg/mL.\n- Algoritmo: Si nivel bajo y anticuerpos (+), cambiar de fármaco; si nivel bajo y anticuerpos (-), intensificar dosis.",
+      debateQuestion: "¿Cómo podemos coordinar las citas en consultas externas para que el paciente se extraiga la analítica valle exactamente el día que le corresponde la inyección de Adalimumab?",
+      clinicalCase: "Paciente de 36 años con Crohn ileocolónico en tratamiento de mantenimiento con Adalimumab 40 mg cada 2 semanas. Presenta un rebrote clínico leve. Se determinan niveles valle de Adalimumab que resultan en 2.1 mcg/mL con anticuerpos anti-fármaco negativos. Se decide intensificar a 40 mg semanal.",
+      localApplicability: "Diseño de una hoja de ruta para la consulta de atención farmacéutica al paciente externo con enfermedad inflamatoria intestinal."
+    }
   }
 ];
 
